@@ -6,10 +6,19 @@ html {
 
 @keyframes asd {
   0% {
-    transform: rotateY(-20deg);
+    transform: rotateY(-20deg) rotateX(0deg);
+  }
+  25% {
+    transform: rotateY(0deg) rotateX(10deg);
+  }
+  50% {
+    transform: rotateY(20deg) rotateX(0deg);
+  }
+  75% {
+    transform: rotateY(0deg) rotateX(-10deg);
   }
   100% {
-    transform: rotateY(20deg);
+    transform: rotateY(-20deg) rotateX(0deg);
   }
 }
 
@@ -45,7 +54,7 @@ html {
   perspective-origin: center;
   perspective: var(--perspective);
   transform-style: preserve-3d;
-  animation: 3s infinite alternate asd;
+  animation: 6s linear infinite both asd;
 }
 
 /* .half-d-container:hover .half-d {
